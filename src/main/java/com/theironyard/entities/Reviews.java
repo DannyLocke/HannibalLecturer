@@ -20,7 +20,7 @@ public class Reviews {
     String text;
 
     @Column(nullable = false)
-    String lecturerId;
+    int lecturerId;
 
     @Column(nullable = false)
     Boolean isGood;
@@ -28,7 +28,7 @@ public class Reviews {
     public Reviews() {
     }
 
-    public Reviews(int id, String author, String text, String lecturerId, Boolean isGood) {
+    public Reviews(int id, String author, String text, int lecturerId, Boolean isGood) {
         this.id = id;
         this.author = author;
         this.text = text;
@@ -36,7 +36,7 @@ public class Reviews {
         this.isGood = isGood;
     }
 
-    public Reviews(String author, String text, String lecturerId, Boolean isGood) {
+    public Reviews(String author, String text, int lecturerId, Boolean isGood) {
         this.author = author;
         this.text = text;
         this.lecturerId = lecturerId;
@@ -67,11 +67,11 @@ public class Reviews {
         this.text = text;
     }
 
-    public String getLecturerId() {
+    public int getLecturerId() {
         return lecturerId;
     }
 
-    public void setLecturerId(String lecturerId) {
+    public void setLecturerId(int lecturerId) {
         this.lecturerId = lecturerId;
     }
 
